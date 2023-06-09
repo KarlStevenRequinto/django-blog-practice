@@ -1,10 +1,45 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}
 lerd robott
 {% endblock title %}
 
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/post.css' %}"/>
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}"/>
+{% endblock css_files %}
 
 {% block content %}
-    <h1>WELCOME</h1>
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/lerd-robott.jpeg' %}" alt="Lerd - The Author"/>
+            <h2 style="width:auto">Lerd</h2>
+        </header>
+
+        <p>Hello, I am Lerd and this is the first blog I created using Django</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Masters</h2>
+
+        <ul>
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
+            {% include "blog/includes/post.html" %}
+            
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2>What I Do<h2>
+        <p>
+            Nothing. Just practicing Django
+        </p>
+
+        <p>
+            Emarson Bayang Pogi
+        </p>
+    <section>
+
 {% endblock content %}

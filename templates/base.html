@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 
 <html>
@@ -7,9 +8,16 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %} {% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'app.css' %}" />
     {% block css_files %} {% endblock css_files %}
   </head>
   <body>
+    <header id="main-navigation">
+      <h1><a href="">Lerd's Ubiquity R&D Team</a></h1>
+      <nav>
+        <a href="">All Posts</a>
+      </nav>
+    </header>
     {% block content %}
     <h1>THIS IS THE HOME PAGE</h1>
     {% endblock content %}
