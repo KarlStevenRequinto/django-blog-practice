@@ -23,7 +23,9 @@ lerd robott
         <h2>My Masters</h2>
 
         <ul>
-            {% include "blog/includes/post.html" %}
+            {% for post in  posts %}
+                {% include "blog/includes/post.html" %}
+            {% endfor %}
         </ul>
     </section>
 
