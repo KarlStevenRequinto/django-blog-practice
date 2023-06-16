@@ -88,10 +88,13 @@ main {
   font: inherit;
   padding: 0.25rem;
   border-radius: 6px;
+  border: 1px solid #ccc
 }
 
 #comment-form button {
-  font: inherit;
+  /* font: inherit;
+  font-size: 10px; */
+  padding: 0.5rem;
   background-color: #390281;
   color: white;
   border: 1px solid #390281;
