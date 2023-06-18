@@ -31,6 +31,9 @@ h3 {
   left: 0;
 }
 
+#main-navigation span {
+  color: #e48900;
+}
 #main-navigation a {
   text-decoration: none;
   color: white;
@@ -39,7 +42,7 @@ h3 {
 
 #main-navigation a:hover,
 #main-navigation a:active {
-  color: #cf79f1;
+  color: #e48900;
 }
 
 #main-navigation h1 a:hover,
