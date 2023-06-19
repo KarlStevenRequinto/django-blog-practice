@@ -17,7 +17,7 @@
   </div>
 {% endif %}
 
-<section id="summary">
+<section id="summary" >
   <h2>{{post.title}}</h2>
   <article>
     <img src="{{ post.image.url }}" alt="post.name" />
@@ -31,7 +31,7 @@
   {{post.content|linebreaks}}
 </main>
 
-<section id="comments">
+<section id="comments" {% if comments|length > 0 %}style='padding: 10px;'{% endif %}>
   <ul>
     {% for comment in comments %}
       <li>
@@ -42,7 +42,7 @@
   </ul>
 </section>
 
-<section id="comment-form">
+<section id="comment-form" >
   <h2>Say Something about {{post.author}}<h2>
   <form action="{% url 'post-detail-page' post.slug %}" method="POST">
     {% csrf_token %}
